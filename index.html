@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NutriSnap</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HOMEPAGE -->
+<div id="homepage">
+  <h1>Are you hungry… or just emotionally damaged?</h1>
+  <button id="cravingBtn">I’m craving</button>
+  <button id="comfortBtn">I’m not okay</button>
+</div>
+
+<!-- SWIPE SECTION -->
+<div id="swipeSection" class="hidden">
+  <div class="card" id="cravingCard">
+    <div class="front">
+      <h2 id="cravingName"></h2>
+      <p>Click to see illusion recipe!</p>
+    </div>
+    <div class="back">
+      <h3>Illusion Recipe</h3>
+      <p id="recipeText"></p>
+      <p id="calorieText"></p>
+      <p id="memeText"></p>
+    </div>
+  </div>
+  <button id="nextBtn">Next Craving</button>
+</div>
+
+<!-- MEME POP -->
+<div id="memePop"></div>
+
+<!-- COMFORT MODE -->
+<div id="comfortMode">
+  <p>It’s okay. You’re doing fine. 💙</p>
+  <p>Here’s a small recipe to calm your cravings:</p>
+  <p>Frozen banana ice-cream 🍌</p>
+  <button id="exitComfort">Back</button>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
