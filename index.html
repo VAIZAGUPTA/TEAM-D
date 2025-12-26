@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NutriSnap</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NutriSnap | Smart Craving Control</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- HOMEPAGE -->
-<div id="homepage">
-  <h1>Are you hungry… or just emotionally damaged?</h1>
-  <button id="cravingBtn">I’m craving</button>
-  <button id="comfortBtn">I’m not okay</button>
+<!-- LOGIN -->
+<div id="loginPage">
+  <h1>NutriSnap 🥗</h1>
+  <p>Smart swaps for smarter cravings</p>
+  <input type="text" id="username" placeholder="Enter your name">
+  <button id="loginBtn">Login</button>
 </div>
 
-<!-- SWIPE SECTION -->
-<div id="swipeSection" class="hidden">
+<!-- NAVBAR -->
+<nav id="navbar" class="hidden">
+  <h2>NutriSnap</h2>
+  <div>
+    <button class="tabBtn" data-tab="home">Home</button>
+    <button class="tabBtn" data-tab="cravings">Cravings</button>
+    <button class="tabBtn" data-tab="comfort">Comfort</button>
+  </div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="tabSection">
+  <h1>Are you hungry… or emotionally damaged?</h1>
+  <div class="homeBtns">
+    <button id="cravingBtn">I’m craving 🍕</button>
+    <button id="comfortBtn">I’m not okay 💙</button>
+  </div>
+</section>
+
+<!-- CRAVING SECTION -->
+<section id="cravings" class="tabSection hidden">
   <div class="card" id="cravingCard">
     <div class="front">
       <h2 id="cravingName"></h2>
-      <p>Click to see illusion recipe!</p>
+      <p>Tap to reveal healthy illusion 🍽️</p>
     </div>
     <div class="back">
       <h3>Illusion Recipe</h3>
@@ -30,19 +52,21 @@
       <p id="memeText"></p>
     </div>
   </div>
-  <button id="nextBtn">Next Craving</button>
-</div>
+  <button id="nextBtn">Next Craving ➡️</button>
+</section>
+
+<!-- COMFORT -->
+<section id="comfort" class="tabSection hidden">
+  <h2>It’s okay. You’re doing fine 💙</h2>
+  <p>Gentle recipe to calm cravings:</p>
+  <div class="comfortCard">
+    <p>🍌 Frozen Banana Ice-Cream</p>
+    <small>Blend frozen bananas + peanut butter</small>
+  </div>
+</section>
 
 <!-- MEME POP -->
 <div id="memePop"></div>
-
-<!-- COMFORT MODE -->
-<div id="comfortMode">
-  <p>It’s okay. You’re doing fine. 💙</p>
-  <p>Here’s a small recipe to calm your cravings:</p>
-  <p>Frozen banana ice-cream 🍌</p>
-  <button id="exitComfort">Back</button>
-</div>
 
 <script src="data.js"></script>
 <script src="script.js"></script>

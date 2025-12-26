@@ -1,23 +1,133 @@
-/* ====== GLOBAL ====== */
-body, html { margin:0; padding:0; font-family:'Roboto', sans-serif; background:#F7F7F7; }
-.hidden { display:none; }
-button { cursor:pointer; border:none; border-radius:6px; padding:10px 20px; font-size:16px; }
+* {
+  box-sizing: border-box;
+}
 
-/* ====== HOMEPAGE ====== */
-#homepage { height:100vh; display:flex; flex-direction: column; justify-content:center; align-items:center; text-align:center; background:#FF6B6B; color:white; }
-#homepage h1 { font-family:'Poppins', sans-serif; font-size:2.5rem; margin-bottom:20px; }
-#homepage button { margin:10px; background:#4ECDC4; color:white; font-weight:bold; }
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+}
 
-/* ====== SWIPE CARDS ====== */
-#swipeSection { height:100vh; display:flex; justify-content:center; align-items:center; flex-direction: column; }
-.card { width:300px; height:400px; background:white; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.2); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; position:relative; transition: transform 0.6s; transform-style: preserve-3d; }
-.card.flipped { transform: rotateY(180deg); }
-.card .front, .card .back { position:absolute; width:100%; height:100%; backface-visibility:hidden; display:flex; justify-content:center; align-items:center; flex-direction: column; border-radius:12px; }
-.card .back { transform: rotateY(180deg); background:#FFE66D; padding:20px; font-size:14px; }
+/* LOGIN */
+#loginPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-/* ====== MEME POP ====== */
-#memePop { position:fixed; top:20px; left:50%; transform:translateX(-50%); background:#4ECDC4; color:white; padding:10px 20px; border-radius:8px; display:none; font-weight:bold; }
+#loginPage input {
+  padding: 12px;
+  width: 250px;
+  border-radius: 6px;
+  border: none;
+  margin: 15px 0;
+}
 
-/* ====== COMFORT MODE ====== */
-#comfortMode { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); color:white; display:flex; justify-content:center; align-items:center; flex-direction: column; font-size:20px; text-align:center; padding:20px; display:none; }
-#comfortMode button { margin-top:20px; background:#FF6B6B; }
+#loginPage button {
+  padding: 12px 25px;
+  background: #ffdd57;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* NAVBAR */
+nav {
+  background: rgba(0,0,0,0.3);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  background: #ffdd57;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+.tabSection {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* HOME */
+.homeBtns button {
+  margin: 15px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  cursor: pointer;
+}
+
+/* CARD */
+.card {
+  width: 300px;
+  height: 400px;
+  margin: auto;
+  perspective: 1000px;
+}
+
+.card > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  padding: 20px;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+  background: #ffdd57;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+  transition: transform 0.6s;
+}
+
+/* COMFORT */
+.comfortCard {
+  background: rgba(255,255,255,0.2);
+  padding: 30px;
+  border-radius: 20px;
+  width: 300px;
+  margin: auto;
+}
+
+/* MEME */
+#memePop {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4ECDC4;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: none;
+}
