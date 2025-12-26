@@ -1,72 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NutriSnap | Smart Craving Control</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriSnap | Smart Nutrition Companion</title>
 
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<!-- LOGIN -->
+<!-- LOGIN PAGE -->
 <div id="loginPage">
-  <h1>NutriSnap 🥗</h1>
-  <p>Smart swaps for smarter cravings</p>
-  <input type="text" id="username" placeholder="Enter your name">
-  <button id="loginBtn">Login</button>
+  <div class="loginCard">
+    <h1>NutriSnap</h1>
+    <p>Your smart nutrition companion</p>
+
+    <input type="email" id="email" placeholder="Email address">
+    <input type="password" id="password" placeholder="Password">
+
+    <button id="loginBtn">Login</button>
+  </div>
 </div>
 
 <!-- NAVBAR -->
 <nav id="navbar" class="hidden">
-  <h2>NutriSnap</h2>
-  <div>
-    <button class="tabBtn" data-tab="home">Home</button>
-    <button class="tabBtn" data-tab="cravings">Cravings</button>
-    <button class="tabBtn" data-tab="comfort">Comfort</button>
-  </div>
+  <div class="logo">NutriSnap</div>
+  <ul>
+    <li data-tab="home">Home</li>
+    <li data-tab="cravings">Cravings</li>
+    <li data-tab="memes">Memes</li>
+    <li data-tab="dietitian">Dietitian</li>
+    <li data-tab="comfort">Comfort</li>
+  </ul>
+  <button id="logoutBtn">Logout</button>
 </nav>
 
+<!-- MAIN CONTENT -->
+<main id="mainContent" class="hidden">
+
 <!-- HOME -->
-<section id="home" class="tabSection">
-  <h1>Are you hungry… or emotionally damaged?</h1>
-  <div class="homeBtns">
-    <button id="cravingBtn">I’m craving 🍕</button>
-    <button id="comfortBtn">I’m not okay 💙</button>
-  </div>
+<section id="home" class="section">
+  <h1>Are you hungry — or emotionally exhausted?</h1>
+  <p>NutriSnap helps you understand cravings and swap smarter.</p>
 </section>
 
-<!-- CRAVING SECTION -->
-<section id="cravings" class="tabSection hidden">
+<!-- CRAVINGS -->
+<section id="cravings" class="section hidden">
   <div class="card" id="cravingCard">
     <div class="front">
       <h2 id="cravingName"></h2>
-      <p>Tap to reveal healthy illusion 🍽️</p>
+      <p>Tap to reveal a healthy swap</p>
     </div>
     <div class="back">
-      <h3>Illusion Recipe</h3>
+      <h3>Healthy Illusion Recipe</h3>
       <p id="recipeText"></p>
       <p id="calorieText"></p>
       <p id="memeText"></p>
     </div>
   </div>
-  <button id="nextBtn">Next Craving ➡️</button>
+  <button id="nextBtn">Next Suggestion</button>
+</section>
+
+<!-- MEMES -->
+<section id="memes" class="section hidden">
+  <h2>Nutrition Memes</h2>
+  <div class="memeGrid">
+    <div class="meme">“You don’t need snacks, you need sleep.”</div>
+    <div class="meme">“Healthy eating starts tomorrow.”</div>
+    <div class="meme">“Calories don’t count when stressed.”</div>
+  </div>
+</section>
+
+<!-- DIETITIAN -->
+<section id="dietitian" class="section hidden">
+  <h2>Talk to a Dietitian (Demo)</h2>
+  <div class="chatBox">
+    <div class="bot">👩‍⚕️ Dietitian: What are you craving today?</div>
+    <input type="text" placeholder="Type your message..." disabled>
+    <small>Live chat coming soon</small>
+  </div>
 </section>
 
 <!-- COMFORT -->
-<section id="comfort" class="tabSection hidden">
-  <h2>It’s okay. You’re doing fine 💙</h2>
-  <p>Gentle recipe to calm cravings:</p>
+<section id="comfort" class="section hidden">
+  <h2>You’re doing okay 💙</h2>
+  <p>Try this calming recipe:</p>
   <div class="comfortCard">
-    <p>🍌 Frozen Banana Ice-Cream</p>
+    🍌 Frozen Banana Ice Cream  
     <small>Blend frozen bananas + peanut butter</small>
   </div>
 </section>
 
-<!-- MEME POP -->
-<div id="memePop"></div>
+</main>
 
 <script src="data.js"></script>
 <script src="script.js"></script>
