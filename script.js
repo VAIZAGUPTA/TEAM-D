@@ -17,42 +17,38 @@ const nextBtn = document.getElementById("nextBtn");
 let index = 0;
 
 /* LOGIN */
-loginBtn.addEventListener("click", () => {
+loginBtn.onclick = () => {
   loginPage.style.display = "none";
   navbar.classList.remove("hidden");
   mainContent.classList.remove("hidden");
-});
+};
 
 /* LOGOUT */
-logoutBtn.addEventListener("click", () => {
-  location.reload();
-});
+logoutBtn.onclick = () => location.reload();
 
 /* TABS */
 tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
+  tab.onclick = () => {
     sections.forEach(sec => sec.classList.add("hidden"));
     document.getElementById(tab.dataset.tab).classList.remove("hidden");
-  });
+  };
 });
 
 /* CRAVINGS */
 function showCraving() {
-  const item = cravings[index];
-  cravingName.innerText = item.name;
-  recipeText.innerText = item.recipe;
-  calorieText.innerText = "Calories Saved: " + item.calories;
-  memeText.innerText = item.meme;
+  const c = cravings[index];
+  cravingName.innerText = c.name;
+  recipeText.innerText = c.recipe;
+  calorieText.innerText = "Calories Saved: " + c.calories;
+  memeText.innerText = c.meme;
   card.classList.remove("flipped");
 }
 
 showCraving();
 
-card.addEventListener("click", () => {
-  card.classList.toggle("flipped");
-});
+card.onclick = () => card.classList.toggle("flipped");
 
-nextBtn.addEventListener("click", () => {
+nextBtn.onclick = () => {
   index = (index + 1) % cravings.length;
   showCraving();
-});
+};

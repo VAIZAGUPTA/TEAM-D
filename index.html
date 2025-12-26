@@ -2,23 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NutriSnap | Smart Nutrition Companion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- LOGIN PAGE -->
-<div id="loginPage">
+<!-- LOGIN -->
+<div id="loginPage" class="fullscreen gradient-bg">
   <div class="loginCard">
     <h1>NutriSnap</h1>
-    <p>Your smart nutrition companion</p>
-
-    <input type="email" id="email" placeholder="Email address">
+    <p>Smart food. Smarter mind.</p>
+    <input type="email" id="email" placeholder="Email ID">
     <input type="password" id="password" placeholder="Password">
-
     <button id="loginBtn">Login</button>
   </div>
 </div>
@@ -36,54 +34,49 @@
   <button id="logoutBtn">Logout</button>
 </nav>
 
-<!-- MAIN CONTENT -->
+<!-- CONTENT -->
 <main id="mainContent" class="hidden">
 
-<!-- HOME -->
-<section id="home" class="section">
-  <h1>Are you hungry — or emotionally exhausted?</h1>
-  <p>NutriSnap helps you understand cravings and swap smarter.</p>
+<section id="home" class="section fullscreen gradient-bg">
+  <h1>Are you hungry… or emotionally tired?</h1>
+  <p>NutriSnap helps you decode cravings and eat smarter.</p>
 </section>
 
-<!-- CRAVINGS -->
-<section id="cravings" class="section hidden">
+<section id="cravings" class="section fullscreen hidden">
   <div class="card" id="cravingCard">
     <div class="front">
       <h2 id="cravingName"></h2>
-      <p>Tap to reveal a healthy swap</p>
+      <p>Tap to reveal a healthy illusion</p>
     </div>
     <div class="back">
-      <h3>Healthy Illusion Recipe</h3>
+      <h3>Healthy Swap</h3>
       <p id="recipeText"></p>
       <p id="calorieText"></p>
       <p id="memeText"></p>
     </div>
   </div>
-  <button id="nextBtn">Next Suggestion</button>
+  <button id="nextBtn">Next Craving</button>
 </section>
 
-<!-- MEMES -->
-<section id="memes" class="section hidden">
+<section id="memes" class="section fullscreen hidden gradient-alt">
   <h2>Nutrition Memes</h2>
   <div class="memeGrid">
-    <div class="meme">“You don’t need snacks, you need sleep.”</div>
-    <div class="meme">“Healthy eating starts tomorrow.”</div>
-    <div class="meme">“Calories don’t count when stressed.”</div>
+    <div class="meme">You’re not hungry. You’re bored.</div>
+    <div class="meme">Eat water. Drink food.</div>
+    <div class="meme">Healthy starts tomorrow.</div>
+    <div class="meme">Stress eats first.</div>
   </div>
 </section>
 
-<!-- DIETITIAN -->
-<section id="dietitian" class="section hidden">
-  <h2>Talk to a Dietitian (Demo)</h2>
+<section id="dietitian" class="section fullscreen hidden">
+  <h2>Dietitian Chat (Demo)</h2>
   <div class="chatBox">
-    <div class="bot">👩‍⚕️ Dietitian: What are you craving today?</div>
-    <input type="text" placeholder="Type your message..." disabled>
-    <small>Live chat coming soon</small>
+    <p>👩‍⚕️ Dietitian: What are you craving today?</p>
+    <input type="text" placeholder="Chat coming soon..." disabled>
   </div>
 </section>
 
-<!-- COMFORT -->
-<section id="comfort" class="section hidden">
+<section id="comfort" class="section fullscreen hidden gradient-soft">
   <h2>You’re doing okay 💙</h2>
   <p>Try this calming recipe:</p>
   <div class="comfortCard">
