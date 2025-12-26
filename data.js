@@ -1,20 +1,20 @@
 const cravings = [
   {
-    name: "Chocolate 🍫",
-    recipe: "Dates + cocoa powder → chocolate vibe",
+    name: "Chocolate",
+    recipe: "Dates + cocoa powder",
     calories: 150,
-    meme: "You don’t want chocolate, you want a hug."
+    meme: "You don’t need chocolate, you need rest."
   },
   {
-    name: "Pizza 🍕",
-    recipe: "Whole wheat base + veggies → pizza illusion",
+    name: "Pizza",
+    recipe: "Whole wheat base + veggies",
     calories: 200,
-    meme: "Pizza can’t fix your life. Sleep might."
+    meme: "Pizza won’t solve stress."
   },
   {
-    name: "Ice Cream 🍨",
+    name: "Ice Cream",
     recipe: "Frozen banana blend",
     calories: 120,
-    meme: "Cold cravings need calm solutions."
+    meme: "Cold cravings = tired mind."
   }
 ];

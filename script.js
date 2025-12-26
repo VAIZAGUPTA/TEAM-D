@@ -1,13 +1,11 @@
 const loginBtn = document.getElementById("loginBtn");
-const usernameInput = document.getElementById("username");
+const logoutBtn = document.getElementById("logoutBtn");
 const loginPage = document.getElementById("loginPage");
 const navbar = document.getElementById("navbar");
+const mainContent = document.getElementById("mainContent");
 
-const tabs = document.querySelectorAll(".tabBtn");
-const sections = document.querySelectorAll(".tabSection");
-
-const cravingBtn = document.getElementById("cravingBtn");
-const comfortBtn = document.getElementById("comfortBtn");
+const tabs = document.querySelectorAll("nav li");
+const sections = document.querySelectorAll(".section");
 
 const card = document.getElementById("cravingCard");
 const cravingName = document.getElementById("cravingName");
@@ -15,27 +13,31 @@ const recipeText = document.getElementById("recipeText");
 const calorieText = document.getElementById("calorieText");
 const memeText = document.getElementById("memeText");
 const nextBtn = document.getElementById("nextBtn");
-const memePop = document.getElementById("memePop");
 
 let index = 0;
 
 /* LOGIN */
 loginBtn.addEventListener("click", () => {
-  if(usernameInput.value.trim() === "") return;
-  loginPage.classList.add("hidden");
+  loginPage.style.display = "none";
   navbar.classList.remove("hidden");
+  mainContent.classList.remove("hidden");
+});
+
+/* LOGOUT */
+logoutBtn.addEventListener("click", () => {
+  location.reload();
 });
 
 /* TABS */
-tabs.forEach(btn => {
-  btn.addEventListener("click", () => {
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
     sections.forEach(sec => sec.classList.add("hidden"));
-    document.getElementById(btn.dataset.tab).classList.remove("hidden");
+    document.getElementById(tab.dataset.tab).classList.remove("hidden");
   });
 });
 
 /* CRAVINGS */
-function showCraving(){
+function showCraving() {
   const item = cravings[index];
   cravingName.innerText = item.name;
   recipeText.innerText = item.recipe;
@@ -44,32 +46,13 @@ function showCraving(){
   card.classList.remove("flipped");
 }
 
-cravingBtn.addEventListener("click", () => {
-  document.getElementById("home").classList.add("hidden");
-  document.getElementById("cravings").classList.remove("hidden");
-  showCraving();
-  showMeme("Healthy swap unlocked!");
-});
-
-nextBtn.addEventListener("click", () => {
-  index = (index + 1) % cravings.length;
-  showCraving();
-  showMeme("Next craving!");
-});
+showCraving();
 
 card.addEventListener("click", () => {
   card.classList.toggle("flipped");
 });
 
-/* COMFORT */
-comfortBtn.addEventListener("click", () => {
-  document.getElementById("home").classList.add("hidden");
-  document.getElementById("comfort").classList.remove("hidden");
+nextBtn.addEventListener("click", () => {
+  index = (index + 1) % cravings.length;
+  showCraving();
 });
-
-/* MEME */
-function showMeme(text){
-  memePop.innerText = text;
-  memePop.style.display = "block";
-  setTimeout(() => memePop.style.display = "none", 2000);
-}
